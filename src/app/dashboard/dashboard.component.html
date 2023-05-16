@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<section class="image-block" style="background-image: url('https://images.pexels.com/photos/845451/pexels-photo-845451.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-repeat: no-repeat; background-size:100% ">
+  <section class ="dashboard-block">
+    <div class="container">
+      <div class="row ">
+        <div class="col login-sec">
+          <form class="form" style="align-content: center; height: 50%; width: 30%;" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+            <div class="form-group">
+              <input type="file" accept=".csv" class="form-control-file" id="csvFile"   (change)="onFileSelected($event)" #csvFileInput>
+            </div><br>
+            <label style="font-weight: 700; font-size: larger; padding-left: 10px; padding-top: 15px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;" for="periodicity"><h3 class="white">Date:</h3></label>
+<input type="date" id="periodicity" name="ate" style="margin-left: 10px;"><br><br>
+<input type="submit" value="Predict" style="font-weight: 700; margin-left: 3%; margin-top: 1%; font-size: larger;">
+
+            <div *ngIf="showTimer" style="margin-top: 10px; font-weight: 700; font-size: larger;">
+                {{ timer }} seconds 
+            </div>
+          </form>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+</section>
